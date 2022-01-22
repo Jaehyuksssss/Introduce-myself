@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            display: flex;
+            flex : 1;
+            height: 100%;
+            margin : 0;
+        }
+
+        body{
+            background-image: url("sea.jpeg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: 0;
+        }
+
+        .intro-box{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1{
+            cursor: pointer;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -ms-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            color: white;
+        }
+        
+        h1:hover{
+            margin-bottom: 10px;
+            -webkit-transform:scale(1,2);
+            -moz-transform:scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform:scale(1.2);
+        }
+
+        a{
+            width: 200px;
+            height: 50px;
+            font-size: 30px;
+            text-decoration: none;
+            text-align: center;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-box">
+        <h1>안녕하세요 임재혁의 매력으로 빠져봅시다</h1>
+        <a id="next-button" href="./introduce.html" style="visibility: hidden;">풍덩?</a>
+    </div>
+    <script>
+        const nextButton = document.getElementById('next-button')
+
+        setTimeout(()=>{
+            nextButton.setAttribute('style','visibility: visible;')
+        },3000)
+    </script>
+</body>
+</html>
