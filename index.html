@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <script src="https://kit.fontawesome.com/b9f1fe2790.js" crossorigin="anonymous"></script>
+    <title>내소개</title>
+</head>
+<body>
+    <!-- thumnail -->
+    <div id="thumnail">
+        <div class="intro-box">
+            <h1 id="thumnail-title">안녕하세요 임재혁의 매력으로 빠져봅시다</h1>
+            <a id="next-button" href="./introduce.html" style="visibility: hidden;">풍덩?</a>
+        </div>
+    </div>
+    <!-- introduce -->
+    <div id="introduce" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <h1><a href="#"></a></h1>
+                <div class="nav">
+                    <a id="move-thumnail">Home</a>
+                    <a href="https://github.com/Jaehyuksssss">Github</a>
+                    <a href="https://www.instagram.com/jaehyuksssss/?hl=ko">Instagram</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="subtitle">
+            <div class="title">
+                <h2>내 소개</h2>
+            </div>
+            <div class="subtitle-introduction">
+                <p>개발자와 전혀 상관없는 경찰공무원 준비를 하다가 개발자라는 꿈을 가지고 열심히 공부중입니다.</p>
+                <p>위코드에서 최선을 다해 제 자신을 발전시키고 싶습니다.</p>
+                <p>프론트엔드 개발자를 희망하며 현재 html css js를 공부하고 있고 앞으로 react와 바닐라js를 공부할 예정입니다. </p>
+                <p>많이 부족한 실력이지만 부트캠프를 수료할 때 후회하지 않도록 열심히 공부할 것 입니다.</p>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="item-header-title">
+                        <h1>about me</h1>
+                    </div>
+                    <div class="item-header-description">
+                        <p>mbti : infp</p>
+                        <p>혈액형 : o</p>
+                        <p>취미 : 축구</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-header-title">
+                        <h1>tech-stack</h1>
+                    </div>
+                    <div class="item-header-description">
+                        <img src="images/html.png">
+                        <img src="images/css.png">
+                        <img src="images/js.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const nextButton = document.getElementById('next-button')
+            const thumanilPage = document.getElementById('thumnail')
+            const introducePage = document.getElementById('introduce')
+            const moveThumnail = document.getElementById('move-thumnail')
+
+            // 자동적으로 페이지 넘어가는 버튼 (3초 후)
+            setTimeout(function(){
+                nextButton.setAttribute('style','visibility: visible;')
+            },3000)
+
+            nextButton.addEventListener('click',function(e){
+                e.preventDefault()
+
+                thumanilPage.setAttribute('style','display: none')
+                introducePage.setAttribute('style','display: block')
+            })
+
+            // 메인으로 이동하는 화면
+            moveThumnail.addEventListener('click',function(e){
+                e.preventDefault()
+              
+                nextButton.setAttribute('style','visibility: hidden;')
+                
+                thumanilPage.setAttribute('style','display: block')
+                introducePage.setAttribute('style','display: none')
+
+                setTimeout(function(){
+                    nextButton.setAttribute('style','visibility: visible;')
+                },3000)
+            })
+        </script>
+</body>
+</html>
